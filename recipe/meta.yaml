@@ -1,14 +1,12 @@
-{% set name = "openapi-schema-validator" %}
-{% set version = "0.1.6" %}
-
+{% set version = "0.2.0" %}
 
 package:
-  name: {{ name }}
+  name: openapi-schema-validator
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 230db361c71a5b08b25ec926797ac8b59a8f499bbd7316bd15b6cd0fc9aea5df
+  url: https://pypi.io/packages/source/o/openapi-schema-validator/openapi-schema-validator-{{ version }}.tar.gz
+  sha256: 71889d1cb69d9fb46eb04243b24e9c0cd7989d9153d29d8770e626874bf68f80
 
 build:
   number: 0
@@ -18,12 +16,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
+    - poetry-core >=1.0.0
   run:
-    - isodate
-    - jsonschema >=3.0.0
-    - python >=3.5
-    - six
+    - attrs >=19.2.0
+    - jsonschema >=4.0.0,<5.0.0
+    - python >=3.6
 
 test:
   imports:
