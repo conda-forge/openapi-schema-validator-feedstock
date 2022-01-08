@@ -1,7 +1,7 @@
 {% set version = "0.2.0" %}
 
 package:
-  name: {{ name }}
+  name: openapi-schema-validator
   version: {{ version }}
 
 source:
