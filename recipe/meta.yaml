@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: openapi-schema-validator
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/o/openapi-schema-validator/openapi-schema-validator-{{ version }}.tar.gz
-  sha256: 2c64907728c3ef78e23711c8840a423f0b241588c9ed929855e4b2d1bb0cf5f2
+  sha256: cf2c96a45c9a9722ea06fc7264d2fc55e0e6258ba8ef291d0ea90b4c5c8bdcfc
 
 build:
   number: 0
