@@ -1,4 +1,4 @@
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: openapi-schema-validator
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/o/openapi-schema-validator/openapi_schema_validator-{{ version }}.tar.gz
-  sha256: 6613714d6a9aee10b4268c47ba85b5b0b3ce87ac0e51e6b290e837994a6c61b7
+  sha256: 6940dba9f4906c97078fea6fd9d5a3a3384207db368c4e32f6af6abd7c5c560b
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - attrs >=19.2.0
     - jsonschema >=4.0.0,<5.0.0
     - python >=3.7
+    - rfc3339-validator
 
 test:
   imports:
