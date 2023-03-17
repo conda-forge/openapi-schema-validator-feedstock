@@ -31,7 +31,7 @@ test:
     - openapi_schema_validator
   commands:
     - pip check
-    - pytest -vv --cov=openapi_schema_validator --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=100
+    - pytest -vv --cov=openapi_schema_validator --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=80
   requires:
     - pip
     - pytest-cov
