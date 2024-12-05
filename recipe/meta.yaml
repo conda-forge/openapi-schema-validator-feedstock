@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/o/openapi-schema-validator/openapi_schema_validator-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/o/openapi-schema-validator/openapi_schema_validator-{{ version }}.tar.gz
   sha256: 11a95c9c9017912964e3e5f2545a5b11c3814880681fcacfb73b1759bb4f2804
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -17,11 +17,11 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - jsonschema >=4.19.1,<5.0.0a0
     - jsonschema-specifications >=2023.5.2,<2024.0.0
-    - python >=3.8
+    - python >={{ python_min }}
     - rfc3339-validator
 
 test:
@@ -35,6 +35,7 @@ test:
   requires:
     - pip
     - pytest-cov
+    - python {{ python_min }}
 
 about:
   home: https://github.com/p1c2u/openapi-schema-validator
