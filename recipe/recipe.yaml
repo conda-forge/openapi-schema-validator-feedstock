@@ -4,8 +4,7 @@ schema_version: 1
 context:
   version: "0.7.0"
   python_check_max: "3.14"
-  pytest_k: not test_array_prefixitems_invalid
-  cov_fail_under: "80"
+  cov_fail_under: "82"
 
 package:
   name: openapi-schema-validator
@@ -40,15 +39,20 @@ tests:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
   - files:
+      recipe:
+        - pyproject.toml
       source:
         - tests/
     requirements:
       run:
+        - mypy
         - pytest-cov
         - python ${{ python_min }}.*
+        - types-jsonschema
     script:
-      - coverage run --source=openapi_schema_validator --branch -m pytest -vv --tb=long --color=yes -k "${{ pytest_k }}"
-      - coverage report --show-missing --skip-covered --fail-under=${{ cov_fail_under }}
+      - coverage run -m pytest
+      - coverage report --fail-under=${{ cov_fail_under }}
+      - mypy -p openapi_schema_validator
 
 about:
   summary: OpenAPI schema validation for Python

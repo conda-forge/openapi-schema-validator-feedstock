@@ -1,0 +1,14 @@
+[tool.pytest]
+addopts = ["-vv", "--tb=long", "--color=yes"]
+
+[tool.coverage]
+run = { source_pkgs = ["openapi_schema_validator"], branch = true }
+report = { show_missing = true, skip_covered = true }
+
+[[tool.mypy.overrides]]
+module = ['openapi_schema_validator._keywords']
+disable_error_code = ['attr-defined']
+
+[[tool.mypy.overrides]]
+module = ['jsonschema_specifications']
+ignore_missing_imports = true
