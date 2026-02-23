@@ -3,11 +3,13 @@ About openapi-schema-validator-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openapi-schema-validator-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/p1c2u/openapi-schema-validator
+Home: https://pypi.org/project/openapi-schema-validator
 
 Package license: BSD-3-Clause
 
 Summary: OpenAPI schema validation for Python
+
+Development: https://github.com/p1c2u/openapi-schema-validator
 
 Current build status
 ====================
