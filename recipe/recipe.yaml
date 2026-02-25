@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.7.0"
+  version: "0.7.2"
   python_check_max: "3.14"
   cov_fail_under: "82"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/openapi-schema-validator/openapi_schema_validator-${{ version }}.tar.gz
-  sha256: 003e93f61cfce036c1fbcf4f6d04f047332591e780100ba4a9fcd649458a09a8
+  sha256: 8515cafc62c3f6374c3d0517f1b0ea69650f07fd81d759238199eac2d26eef0c
 
 build:
   number: 0
