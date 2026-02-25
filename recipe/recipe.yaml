@@ -26,9 +26,10 @@ requirements:
     - poetry-core >=1.0.0
     - python ${{ python_min }}.*
   run:
-    - jsonschema >=4.19.1,<5.0.0a0
+    - jsonschema >=4.19.1,<5.0.0
     - jsonschema-specifications >=2024.10.1
     - python >=${{ python_min }}
+    - referencing >=0.37.0,<0.38.0
     - rfc3339-validator
 
 tests:
