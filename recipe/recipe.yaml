@@ -31,6 +31,8 @@ requirements:
     - python >=${{ python_min }}
     - referencing >=0.37.0,<0.38.0
     - rfc3339-validator
+  run_constraints:
+    - regress >=2025.10.1
 
 tests:
   - python:
@@ -49,6 +51,7 @@ tests:
         - mypy
         - pytest-cov
         - python ${{ python_min }}.*
+        - regress
         - types-jsonschema
     script:
       - coverage run -m pytest
