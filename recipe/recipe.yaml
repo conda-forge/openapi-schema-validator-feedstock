@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.7.2"
+  version: "0.8.0"
   python_check_max: "3.14"
   cov_fail_under: "82"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/o/openapi-schema-validator/openapi_schema_validator-${{ version }}.tar.gz
-  sha256: 8515cafc62c3f6374c3d0517f1b0ea69650f07fd81d759238199eac2d26eef0c
+  sha256: 5828e9f11bddf8efbbfa50f178783572219fbf0d92f85561bda04ebf5bcefe17
 
 build:
   number: 0
@@ -31,6 +31,8 @@ requirements:
     - python >=${{ python_min }}
     - referencing >=0.37.0,<0.38.0
     - rfc3339-validator
+  run_constraints:
+    - regress >=2025.10.1
 
 tests:
   - python:
@@ -49,6 +51,7 @@ tests:
         - mypy
         - pytest-cov
         - python ${{ python_min }}.*
+        - regress
         - types-jsonschema
     script:
       - coverage run -m pytest
